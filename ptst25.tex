@@ -21,13 +21,31 @@
 \end{proof}
 
 \begin{problem}
-    (a) Positive rational numbers $a, b,$ and $c$ have the property that $\frac{a}{b} + \frac{b}{c} + \frac{c}{a}$ is an integer. Is it possible for $\frac{a}{c} + \frac{c}{b} + \frac{b}{a}$ to also be an integer except for the trivial solution?
+    (a) Positive rational numbers $a, b,$ and $c$ have the property that $\frac{a}{b} + \frac{b}{c} + \frac{c}{a}$ is an integer. 
+    Is it possible for $\frac{a}{c} + \frac{c}{b} + \frac{b}{a}$ to also be an integer except for the trivial solution?
 
-    (b) Positive real numbers $a, b,$ and $c$ have the property that $\frac{a}{b} + \frac{b}{c} + \frac{c}{a}$ is an integer. Is it possible for $\frac{a}{c} + \frac{c}{b} + \frac{b}{a}$ to also be an integer except for the trivial solution?
+    (b) Positive real numbers $a, b,$ and $c$ have the property that $\frac{a}{b} + \frac{b}{c} + \frac{c}{a}$ is an integer. 
+    Is it possible for $\frac{a}{c} + \frac{c}{b} + \frac{b}{a}$ to also be an integer except for the trivial solution?
 \end{problem}
 
 \begin{proof}
-
+    We solve part (b) first.
+    \begin{remark}
+        Note that the trivial solution is obviously $a=b=c$. However, it was mentioned in the contest that $a=b$ or any permutation of it is allowed,
+        so we make full use of it below.
+    \end{remark}
+    \begin{claim}
+        For positive real numbers $a$, $b$, $c$, it is possible.
+    \end{claim}
+    \begin{proof}
+        Set $a=b$ and we get that the first expression and the second expression are equal. Therefore, we need to 
+        find a value for $a$, $b$, and $c$ such that the expression is equal. This is obviously quite easy, we can just set $a=b=1$ and solve some 
+        equation by setting
+        \[
+        1 + c + \frac 1c = k
+        \]
+        where $k$ is some integer. For our example let $k=4$, giving $c=\frac{3+\sqrt5}{2}$, which works upon checking and we're done.
+    \end{proof}
 \end{proof}
 
 \begin{problem}
@@ -48,7 +66,7 @@
 \end{problem}
 
 \begin{proof}
-    
+
 \end{proof}
 
 \end{document}
