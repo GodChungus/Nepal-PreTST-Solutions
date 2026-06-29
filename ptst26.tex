@@ -95,4 +95,20 @@
     $r \ge 1$.
 \end{proof}
 
+\begin{problem}
+    Find all functions $f:\mathbb{Z}_{\ge 0}\to\mathbb{Z}_{\ge 0}$ such that for all 
+    $m\in\mathbb{N}$,$$f(m-1)\mid m \qquad \text{ and } \qquad m+1 \mid T_{2026}(m),
+    $$where $T_1(m)=f(m)$ and $T_{k+1}(m)=f\bigl(m+T_k(m)\bigr)$ for all $k\ge 1$.
+\end{problem}
+
+\begin{proof}
+    We proceed by downward induction. Assume, for some $k \le 2026$, that $m+1 \mid T_k(m)$. Then,
+    \[
+    m+1 \mid T_k(m) = f(m+T_{k-1}(m)) \mid m+1+T_{k-1}(m)
+    \]
+    Therefore we get that $m+1 \mid T_k(m) \implies m+1 \mid T_{k-1}(m)$, so we reduce this to $m+1 \mid f(m)$. Combining
+    with the first condition we get that $f(m) \mid m+1$ which gives $f(m) = m+1$ for $m>0$. However setting $m=1$ in the first
+    condition gives us $f(0) = 1$, therefore $f(m) = m+1$ for all $m\ge0$.
+\end{proof}
+
 \end{document}
