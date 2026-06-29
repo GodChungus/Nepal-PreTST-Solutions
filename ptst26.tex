@@ -17,29 +17,17 @@
     has at least one real root, and every real root of $P$ is greater than or equal to $1$.
 \end{problem}
 
-\begin{proof}
-
-\end{proof}
-
 \begin{problem}
     Find all functions $f:\mathbb{Z}_{\ge 0}\to\mathbb{Z}_{\ge 0}$ such that for all 
     $m\in\mathbb{N}$,$$f(m-1)\mid m \qquad \text{ and } \qquad m+1 \mid T_{2026}(m),
     $$where $T_1(m)=f(m)$ and $T_{k+1}(m)=f\bigl(m+T_k(m)\bigr)$ for all $k\ge 1$.
 \end{problem}
 
-\begin{proof}
-    
-\end{proof}
-
 \begin{problem}
     Let $ABC$ be an acute scalene triangle with $\angle BAC=60^\circ$. Denote by $O$ and $H$ the circumcenter and orthocenter of
     $\triangle ABC$ respectively. Let $M$ be the midpoint of arc $BC$ on $(ABC)$ not containing $A$, and let ray $\overrightarrow{MH}$
     intersect $(ABC)$ a second time at $P$. Show that the lines $AP$, $OH$ and $BC$ pass through a common point.
 \end{problem}
-
-\begin{proof}
-
-\end{proof}
 
 \begin{problem}
     Consider the standard triangular grid of unit equilateral triangles forming a larger equilateral triangle of side length $n$. Initially,
@@ -50,18 +38,10 @@
     $n$ for which it is possible, after a sequence of moves, for all unit triangles in the grid to be black at the same time.
 \end{problem}
 
-\begin{proof}
-
-\end{proof}
-
 \begin{problem}
     Let $\sigma(n)$ denote the divisors sum of $n$, and let $d(n)$ denote the number of divisors of $n$. Prove that for any nonnegative 
     integer $k$, the equation $\sigma(n) = d(n)^k$ has finitely many solutions.
 \end{problem}
-
-\begin{proof}
-    
-\end{proof}
 
 \begin{problem}
     Let $\omega_1$ and $\omega_2$ be two circles intersecting at distinct points $X$ and $Y$. Let $\ell$ be their common tangent closer to $Y$, 
@@ -71,10 +51,6 @@
     Prove that $D, Y, X, E$ are concyclic. (Four points are concyclic if there exists a circle containing all four points.)
 \end{problem}
 
-\begin{proof}
-    
-\end{proof}
-
 \begin{problem}
     For each positive integer $n$, let $\kappa(n)$ denote the unique squarefree positive integer such that$\frac{n}{\kappa(n)}$ is a perfect square.
     Let $G$ be a connected simple graph whose edges are labeled by positive integers $w_e$. Assume that for every cycle $C$ in $G$, the product
@@ -82,18 +58,41 @@
     such that for every edge $uv\in E(G)$ there exists a positive integer $t_{uv}$ with $w_{uv}=\kappa(s_us_v)\,t_{uv}^2$.
 \end{problem}
 
-\begin{proof}
-    
-\end{proof}
-
 \begin{problem}
     For all positive reals $a,b,c$, prove the inequality
     $$\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b} \; \ge\; \frac32+\frac{(a-b)^2+(b-c)^2+(c-a)^2}{2(a+b+c)^2}.$$
     Determine when equality holds.
 \end{problem}
 
+\newpage
+
+\section{Solutions}
+
+\begin{problem}
+    Let $a_1,a_2,\dots,a_{2n+2}$ be positive real numbers. Prove that they can be permuted into numbers $u_0,v_0,u_1,v_1,\dots,u_n,v_n$ such that 
+    the polynomial
+    $$P(x)=u_0-v_0x+u_1x^2-v_1x^3+\dots+u_nx^{2n}-v_nx^{2n+1}$$
+    has at least one real root, and every real root of $P$ is greater than or equal to $1$.
+\end{problem}
+
 \begin{proof}
-    
+    Obviously $P$ has one real root due to it having an odd degree. We then group the numbers into $n+1$ pairs like
+    $(u_0, v_0)$, $(u_1, v_1)$, $\cdots (u_n, v_n)$ such that for each $0 \le k \le n$, $u_k \ge v_k$. We now observe the behavior of the
+    following expression:
+
+    \[
+        u_kx^{2k} - v_kx^{2k+1} = x^{2k}((u_k-v_k)+v_k(1-x))
+    \]
+
+    Which, for $x<1$, is nonnegative. Moreover, consider the case when $x=0$, we get for $k=0$ that $u_0 - v_0(0) = u_0 > 0$ so
+    at least one of these pairs is strictly positive for all $x<1$ and we conclude that
+
+    \[
+    P(x) > 0 \text{ for all } x < 1.
+    \]
+
+    FTSOC, if $r<1$ was a real root of $P$, we would have $P(r)=0$ and $P(r)>0$, contradiction. Therefore every real root $r$ of $P$ satisfies
+    $r \ge 1$.
 \end{proof}
 
 \end{document}
