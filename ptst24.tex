@@ -5,7 +5,7 @@
 \begin{document}
 \title{Nepal PreTST 2024 Solutions}
 \author{Prakrit Gajurel}
-\date{28 June 2026}
+\date{6 July 2026}
 \maketitle
 
 \section{Problems}
@@ -16,9 +16,40 @@
     Can Nirajan always escape?
 \end{problem}
 
-\begin{proof}
+\begin{problem}
+    Let, $\displaystyle{S =\sum_{i=1}^{k} {n_i}^2}$. Prove that for $n_i \in \mathbb{R}^+$
+    $$\sum_{i=1}^{k} \frac{n_i}{S-n_i^2} \geq \frac{4}{n_1+n_2+ \cdots+ n_k}$$
+\end{problem}
 
+\begin{problem}
+    Let $ABC$ be an acute triangle and $H$ be its orthocenter. Let $E$ be the foot of the altitude from $C$ to $AB$, 
+    $F$ be the foot of the altitude from $B$ to $AC$. Let $G \neq H$ be the intersection of the circles $(AEF)$ and $(BHC)$.
+    Prove that $AG$ bisects $BC$.
+\end{problem}
+
+\begin{problem}
+    Find all integer/s $n$ such that $\displaystyle{\frac{5^n-1}{3}}$ is a prime or a perfect square of an integer.
+\end{problem}
+
+\newpage
+
+\section{Solutions}
+
+\subsection{Problem 1, proposed by Vlad Spǎtaru(Romania)}
+
+\begin{problem}
+    Nirajan is trapped in a magical dungeon. He has infinitely many magical cards with arbitrary MPs(Mana Points) which is always an integer 
+    $\mathbb{Z}$. To escape, he must give the dungeon keeper some magical cards whose MPs add up to an integer with at least $2024$ divisors. 
+    Can Nirajan always escape?
+\end{problem}
+
+\begin{proof}
+    
 \end{proof}
+
+\newpage
+
+\subsection{Problem 2, proposed by Kang Taeyoung(South Korea)}
 
 \begin{problem}
     Let, $\displaystyle{S =\sum_{i=1}^{k} {n_i}^2}$. Prove that for $n_i \in \mathbb{R}^+$
@@ -28,6 +59,10 @@
 \begin{proof}
     
 \end{proof}
+
+\newpage
+
+\subsection{Problem 3, proposed by Kang Taeyoung(South Korea)}
 
 \begin{problem}
     Let $ABC$ be an acute triangle and $H$ be its orthocenter. Let $E$ be the foot of the altitude from $C$ to $AB$, 
@@ -39,12 +74,29 @@
     
 \end{proof}
 
+\newpage
+
+\subsection{Problem 4, proposed by Prajit Adhikari(Nepal)}
+
 \begin{problem}
     Find all integer/s $n$ such that $\displaystyle{\frac{5^n-1}{3}}$ is a prime or a perfect square of an integer.
 \end{problem}
 
+\begin{remark}
+    The easiest problem on a Nepal PreTST, ever. Enjoy this solution I did over a year ago, when I barely knew number theory.
+\end{remark}
+
 \begin{proof}
-    
+    We claim the only answer is $n=0$, which clearly works. We now prove no $n \ge 1$ exists(obviously $n<0$ doesnt work).
+    First, let $p$ denote any prime, then,
+    \[
+    \frac{5^n-1}{3}=p
+    \]
+    Taking modulo $4$ gives us $p \equiv 0$ (mod $4$), clearly ridiculous. Further let $k$ denote any perfect square, so
+    \[
+    5^n-1=3k
+    \]
+    Giving $-1 \equiv 3k$ (mod $5$) which again is absurd. Therefore, $n=0$ is the only solution.
 \end{proof}
 
 \end{document}
