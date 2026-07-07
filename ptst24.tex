@@ -5,7 +5,7 @@
 \begin{document}
 \title{Nepal PreTST 2024 Solutions}
 \author{Prakrit Gajurel}
-\date{6 July 2026}
+\date{7 July 2026}
 \maketitle
 
 \section{Problems}
@@ -57,7 +57,23 @@
 \end{problem}
 
 \begin{proof}
-    
+    By Cauchy-Schwarz, we get:
+    \[
+    \left( \sum_{i=1}^{k} \frac{n_i}{S-n_i^2} \right) \left( \sum_{i=1}^k n_i \right) \ge \left( \sum_{i=1}^k \sqrt{\frac{n_i^2}{S-n_i^2}} \right)
+    \]
+    From AM-GM, we get:
+    \[
+    \frac{S-n_i^2}{n_i^2} + 1 \ge 2 \sqrt{\frac{S-n_i^2}{n_i^2}}
+    \]
+    Which, upon flipping gives us
+    \[
+    \sqrt{\frac{n_i^2}{S-n_i^2}} \ge \frac{2n_i^2}{S}
+    \]
+    Therefore, summing from $1$ to $k$ gives,
+    \[
+    \left( \sum_{i=1}^k \sqrt{\frac{n_i^2}{S-n_i^2}} \right) \ge \frac{4}{S^2} \left( \sum_{i=1}^k n_i^2 \right)^2  = 4
+    \]
+    And we're done.
 \end{proof}
 
 \newpage
