@@ -5,7 +5,7 @@
 \begin{document}
 \title{Nepal PreTST 2026 Solutions}
 \author{Prakrit Gajurel}
-\date{4 July 2026}
+\date{7 July 2026}
 \maketitle
 
 \section{Problems}
@@ -128,7 +128,54 @@
 \end{problem}
 
 \begin{proof}
-    
+    It suffices to show that quadrilaterals $BOHC$ and $APHO$ are cyclic, from which the radical axis theorem finishes.
+
+    \begin{claim}
+        Quadrilateral $BOHC$ is cyclic.
+        \begin{proof}
+            We have
+            \[
+            \angle BHC = 180^\circ - \angle BAC = 120^\circ = 2\angle BAC = \angle BOC.
+            \]
+        \end{proof}
+    \end{claim}
+
+    \begin{claim}
+        Quadrilateral $APHO$ is cyclic.
+        \begin{proof}
+            We have that:
+            \begin{align*}
+                \angle HOA &= 360^\circ - \angle AOB - \angle BOH\\ 
+                &= 180^\circ - 2\angle ACB + \angle HCB \\ 
+                &= 270^\circ - 2\angle ACB - \angle CBA
+            \end{align*}
+            Also, we have
+            \begin{align*}
+                \angle APH
+                &= 180^\circ - \angle MBA \\ 
+                &= 180^\circ - (\angle MBC + \angle CBA) \\
+                &= 180^\circ - (90^\circ - \frac{\angle BOC}{2} + \angle CBA) \\
+                &= 180^\circ - (90^\circ - \angle BAC + \angle CBA) \\
+                &= 150^\circ - \angle CBA
+            \end{align*}
+            Therefore we get that $\angle HOA + \angle APH = 420^\circ - 2(\angle ACB + \angle CBA) = 180^\circ$.
+        \end{proof}
+    \end{claim}
+    Therefore radical axis on $(ABC)$, $APHO$, and $BOHC$ completes. However, it doesn't. We are left to prove that the three
+    lines actually concur at some point, and are not parallel.
+    \begin{claim}
+       The lines $AP$, $OH$, and $BC$ are not parallel.
+        \begin{proof}
+            Assume not, for the sake of contradiction. Then, $BHOC$ becomes a cyclic trapezoid so $BH=OC$. Some simple length
+            chasing gives
+            \[
+            BH = 2 CO \cos(\angle CBA)
+            \]
+            Which forces $\angle CBA = 60^\circ$, contradicting $\triangle ABC$ scalene. Therefore, the three lines are not
+                parallel.
+        \end{proof}
+    \end{claim}
+    And we're actually done.
 \end{proof}
 
 \newpage{}
